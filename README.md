@@ -9,15 +9,6 @@ Rosnąca automatyzacja aktywności w mediach społecznościowych stanowi istotne
 
 Badania przeprowadzono na benchmarku **TwiBot-20** (11 826 oznaczonych profili: 8 278 train / 2 365 dev / 1 183 test, podział 7:2:1). Modele osiągnęły ROC-AUC w przedziale **0.877–0.923** na zbiorze testowym.
 
-### Pytania badawcze
-
-| # | Pytanie badawcze |
-|---|---|
-| PB1 | Który z analizowanych modeli klasyfikacyjnych osiąga najlepsze wyniki w detekcji botów w zbiorze TwiBot-20? |
-| PB2 | Jakie typy błędów dominują w poszczególnych modelach? |
-| PB3 | Jaki wpływ na jakość klasyfikacji ma cecha „verified”? |
-| PB4 | W jakim stopniu wyniki eksploracyjnej analizy OSINT są zgodne z predykcją modelu oraz etykietą TwiBot-20? |
-
 ### Główny wniosek
 
 Modele uczenia maszynowego umożliwiają skuteczną detekcję fałszywych profili, jednak ich wysoka efektywność opiera się w dużej mierze na jednej cesze — statusie weryfikacji konta (`verified`). Eksperyment ablacyjny (usunięcie tej cechy z XGBoost) obniżył accuracy z 0.8555 do 0.7921, F1 z 0.8711 do 0.8057, a ROC-AUC z 0.9230 do 0.8782. Oznacza to, że skuteczność systemu jest ograniczona dla profili, gdzie informacja o weryfikacji jest niedostępna.
@@ -28,7 +19,7 @@ Modele uczenia maszynowego umożliwiają skuteczną detekcję fałszywych profil
 
 Zbiór **TwiBot-20** (Feng, Wan, Wang, Li, Luo) — jeden z największych benchmarków do detekcji botów na Twitterze, obejmujący 229 573 użytkowników, 33 488 192 tweetów, 8 723 736 atrybutów profili i 455 958 relacji obserwowania (dane zbierane VII–IX 2020). Tylko 11 826 profili posiada etykiety `bot`/`human` i wchodzi w oficjalny podział train/dev/test.
 
-Zbiór jest udostępniany wyłącznie do celów naukowych po uzyskaniu zgody od współautorów (kontakt mailowy → link do Google Drive). Dokumentacja TwiBot-20 nie precyzuje jednoznacznie zgodności z przepisami o ochronie danych osobowych — praca traktuje to jako ograniczenie etyczno-prawne.
+Zbiór jest udostępniany wyłącznie do celów naukowych po uzyskaniu zgody od współautorów (kontakt mailowy → link do Google Drive).
 
 ### Struktura pojedynczego rekordu
 
@@ -183,8 +174,7 @@ fake-profiles-detector/
 ├── osint_sample_check.py
 └── README.md
 ```
-
-## Dlaczego duże pliki nie zostały dodane do repozytorium
+## 
 
 W repozytorium pozostawiono jedynie kod źródłowy, konfigurację, lekkie artefakty (`scaler.pkl`, `feature_names.pkl`, `lr_balanced.pkl`) oraz pliki wynikowe w formacie CSV/PNG. Aby odtworzyć pełny pipeline, należy samodzielnie pozyskać dostęp do TwiBot-20 (kontakt z autorami benchmarku) i uruchomić skrypty w kolejności: `data_loading.py` → `feature_extraction.py`/`build_features.py` → `train_prep.py` → `train_models.py` → `osint_sample_check.py`.
 
