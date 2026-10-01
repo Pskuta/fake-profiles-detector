@@ -1,0 +1,31 @@
+# TwiBot-20: surowe dane i wygenerowane cechy poza repozytorium
+/data/raw/**
+!/data/raw/.gitkeep
+/data/processed/**
+!/data/processed/.gitkeep
+
+# Duże, odtwarzalne artefakty treningowe
+/models/prepared_data.joblib
+/models/rf_balanced.pkl
+/models/xgb_balanced.pkl
+/models/lr_balanced.pkl
+/models/xgb_no_ver_balanced.pkl
+
+# Python i środowisko lokalne
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Edytor i system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
