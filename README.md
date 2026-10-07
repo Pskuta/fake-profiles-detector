@@ -329,6 +329,9 @@ Projekt zaimplementowano w **Python 3.12.2**.
 
 ## Wyniki modeli
 
+<img width="589" height="354" alt="image" src="https://github.com/user-attachments/assets/cca40c46-5a79-46a0-ba03-826ee283fdd7" />
+
+
 | Model | Accuracy (val) | F1 (val) | ROC-AUC (val) | Accuracy (test) | F1 (test) | ROC-AUC (test) |
 |---|---|---|---|---|---|---|
 | Logistic Regression | 0.8262 | 0.8518 | 0.8952 | 0.8276 | 0.8504 | 0.9002 |
