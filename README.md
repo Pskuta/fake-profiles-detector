@@ -135,6 +135,10 @@ The project is implemented in **Python 3.12.2**.
 
 ## Model results
 
+<p align="center">
+<img width="589" height="354" alt="chart_english_corrected" src="https://github.com/user-attachments/assets/b7609849-f551-4d43-a193-f768228b21d7" />
+</p>
+
 | Model | Accuracy (val) | F1 (val) | ROC-AUC (val) | Accuracy (test) | F1 (test) | ROC-AUC (test) |
 |---|---|---|---|---|---|---|
 | Logistic Regression | 0.8262 | 0.8518 | 0.8952 | 0.8276 | 0.8504 | 0.9002 |
@@ -328,9 +332,9 @@ Projekt zaimplementowano w **Python 3.12.2**.
 - **XGBoost** - `n_estimators=500`, `max_depth=6`, `learning_rate=0.05`, `subsample=0.8`, `colsample_bytree=0.8`, `min_child_weight=3`, `scale_pos_weight=neg/pos`, `early_stopping_rounds=50`.
 
 ## Wyniki modeli
-
+<p align="center">
 <img width="589" height="354" alt="image" src="https://github.com/user-attachments/assets/cca40c46-5a79-46a0-ba03-826ee283fdd7" />
-
+</p>
 
 | Model | Accuracy (val) | F1 (val) | ROC-AUC (val) | Accuracy (test) | F1 (test) | ROC-AUC (test) |
 |---|---|---|---|---|---|---|
